@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>libros</h1>
+
+    <script>
+        class Libro{
+          constructor(nom, aut, edito, gen){
+            this.nombre = nom;
+            this.autor = aut;
+            this.editor = edito;
+            this.genero = gen;         
+            }
+
+          mostrarlibro (){
+             return  `${this.nombre}  (${this.autor}, editorial ${this.editor}).  ${genero}`
+          }  
+        }
+        const li1 = new libro('hamblet','William shakespeare','Zig zag','novela')
+        const li2 = new libro('Despojo','Martín correa ','Ceibo ediciones','No ficción ')
+        const li3 = new libro('Humberto','Paula vasquez','Zig zag','Ficción ')
+
+        const libro = [l1, l2,l3];
+
+        function filtrarPorAutor(libros, nombre_autor){
+            const libros_autor= []
+
+            for (let libro of libros){
+                if (libro.autor == nombre_autor){
+                    libros_autor.push(libro)
+                }
+            }
+            return libros_autor;
+        }
+    </script>
+    
+</body>
+</html>
